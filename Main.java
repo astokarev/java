@@ -11,6 +11,8 @@ public class Main {
 
         testVars();
         solveTask(a, b, c, d);
+        System.out.println(isPositive(53));
+        System.out.println(isNegative(-4));
         System.out.println(moreOrLess(a,b));
         System.out.println(testString(name));
         checkYear(year);
@@ -18,6 +20,20 @@ public class Main {
 
     private static void solveTask(int a, int b, int c, int d) {
         System.out.println(a * (b + ((double) c / d)));
+    }
+    
+       private static String isPositive(int number) {
+        if (number >= 0) {
+            return "Число положительное";
+        }
+        return "Число отрицательное";
+    }
+    
+        private static boolean isNegative(int number) {
+        if (number < 0) {
+            return true;
+        }
+        return false;
     }
 
     private static boolean moreOrLess(int a, int b) {
